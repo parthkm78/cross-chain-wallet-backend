@@ -4,7 +4,6 @@ const  logger  = require("../../util/logger.js");
 const validator = require("express-validator");
 const { validationResult } = validator;
 const { ethers,  Wallet, utils } = require('ethers');
-const { isVaidatorExists, JsonRpcProvider } = require("../../util/validator.js");
 
 
 const getInfo = async (req, res) => {
