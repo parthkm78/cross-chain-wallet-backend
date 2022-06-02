@@ -18,6 +18,6 @@ const walletController = require("../../controllers/v1/wallet.js");
 const { errorResponse, successResponse } = require("../../util/response.js");
 const { ERROR_MESSAGE, HTTP_STATUS_CODE } = require("../../util/constants.js");
 
-router.get("/info", walletController.getInfo);
+router.get("/balance", walletController.getInfo);
 
 module.exports = router;
