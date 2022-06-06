@@ -37,10 +37,14 @@ app.use(helmet());
 
 // ROUTES
 const walletRouter = require("./routes/api/wallet.js");
-app.use("/wallet", walletRouter);
+app.use("/balance", walletRouter);
+
+// ROUTES
+const transectionRouter = require("./routes/api/transection.js");
+app.use("/transection", transectionRouter);
 
 // Start Server
-const port = process.env.PORT || 5020;
+const port = process.env.PORT || 5000;
 http.createServer(null, app).listen(port, () => {
   logger.info("HTTP Server is running on port:" + port);
   // Initialize Server Issuer Agent
